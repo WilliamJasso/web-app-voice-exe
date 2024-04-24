@@ -1,0 +1,207 @@
+body {
+    background-color: #282c34;
+    color: white;
+    font-size: calc(10px + 2vmin);
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw; /* Establecer el ancho al 100% del viewport */
+    height: 100vh; /* Establecer la altura al 100% del viewport */
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  
+  .orden {
+    padding: 25px 50px;
+    border-radius: 40px;
+    border: 0;
+    color: hsl(0, 0%, 100%);
+    background-color: hsla(212, 92%, 56%, 0.933);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(7, 114, 246) 0px 7px 29px 0px;
+    letter-spacing: 1.5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 450;
+    font-style: normal;
+    font-size: 23px;
+    transition: all 0.5s ease;
+    margin: 30px;
+    text-align: center;
+  }
+
+  
+  
+
+  .tooltip-container {
+    --bubble-size: 12px;
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    width: auto;
+    height: auto;
+    background: #282c34;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 17px;
+    padding: 0.7em 1.8em;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 8px 0 rgb(255, 255, 255);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .tooltip {
+    position: absolute;
+    width: fit-content;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-51%) translateY(-75%);
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.5s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: var(--bubble-size);
+    background: #282c34;
+    box-shadow: rgb(244, 244, 244) 0px 0px 20px 0px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    font-style: normal;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tooltip-title {
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tooltip-item {
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .text {
+    display: flex;
+    margin-bottom: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text img {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .tooltip::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    border-style: solid;
+    border-width: 8px 8px 0;
+    border-color: #282c34 transparent transparent;
+  }
+  
+  .tooltip-container:hover {
+    background-color: hsl(212, 92%, 56%);
+    color: white;
+    box-shadow: 0 0 20px (white);
+  }
+  
+  .tooltip-container:hover .tooltip {
+    top: -120%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+
+
+  /* Estilos para dispositivos móviles */
+  @media only screen and (max-width: 600px) {
+    body {
+      font-size: 23px; /* Ajustar el tamaño de la fuente */
+      display: flex; 
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100vw; /* Establecer el ancho al 100% del viewport */
+      height: 100vh; /* Establecer la altura al 100% del viewport */
+    }
+  
+    .orden {
+      font-size: 20px; /* Ajustar el tamaño de la fuente */
+      padding: 25px;
+      margin: 60px; /* Ajustar el margen */
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  
+
+
+  .tooltip-container {
+    bottom: 20px; /* Ajustar la posición en la parte inferior */
+    right: 30px; /* Ajustar la posición a la derecha */
+    left: 30px; /* Ajustar la posición a la derecha */
+    padding: 0.5em 1em; /* Ajustar el padding */
+    font-size: 14px; /* Ajustar el tamaño de la fuente */
+    border-radius: 6px; /* Ajustar el radio del borde */
+    box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.5); /* Ajustar la sombra */
+  }
+
+  .tooltip {
+    padding: 25px; /* Ajustar el padding */
+    font-size: 12px; /* Ajustar el tamaño de la fuente */
+    transform: translateX(-50%) translateY(-85%);
+    border-radius: 10px;
+    border: 0;
+  }
+
+  .tooltip-title {
+    font-size: 19px; /* Ajustar el tamaño de la fuente */
+    margin-bottom: 8px; /* Ajustar el margen inferior */
+  }
+
+  .tooltip-item {
+    font-size: 15px; /* Ajustar el tamaño de la fuente */
+    margin-bottom: 4px; /* Ajustar el margen inferior */
+  }
+
+  .Logo img {
+    width: 30px; /* Ajustar el ancho de la imagen */
+    height: 30px; /* Ajustar la altura de la imagen */
+  }
+
+}
+
+
+

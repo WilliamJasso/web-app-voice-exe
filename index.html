@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Lectura de ordenes</title>
+    
+  </head>
+  <body>
+   
+    
+    
+      <p>Ordenes en tiempo real:</p>
+
+
+      <div class="orden">Ultima orden identificada: <br><strong id="orden"> </strong></div>
+
+
+    <div class="tooltip-container" onmouseover="showTooltip()" onmouseout="hideTooltip()">
+        <span class="tooltip" id="tooltip">
+          <div class="tooltip-title">Ordenes en tiempo real:</div>
+          <div class="tooltip-item">Muestra la última orden dada</div>
+          <div class="tooltip-item">en la aplicación en tiempo real</div>
+        </span>
+        <span class="text">¿Qué es esto? 🤔</span>
+    </div>      
+    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
